@@ -1,0 +1,66 @@
+<Template name="modheadfootView" xmlns="http://www.w3.org/1999/html">
+{{#famousContext id='mainCtx'}}
+
+    {{#View size="[undefined,undefined]"}}
+    {{#Surface id="backing" size="[undefined,undefined]" class="backing" translate="[0,0,-10]"}} {{/Surface}}
+
+    {{#View id="sidebar" size="[200,500]" origin="[0,0]" align="[0,0]" translate="[10,30,-5]"}}
+    {{#Surface id = "mb" size="[undefined,500]" class="sidebarback" translate="[0,0,-2]"}} {{/Surface}}
+
+    {{#Surface id="m1" origin="[0,0]" align="[0,0]" size="[undefined,90]" translate="[0,0,-1]" class="sidebar m1"}}
+    <img id="m1" src="design.png" width="190px">
+    {{/Surface}}
+
+    {{#Surface id = "m2" origin="[0,0]" align="[0,0.2]" translate="[0,0,-1]" size="[undefined,90]" class="sidebar m2" }}
+    <img src="dribble.png" width="190px">
+    {{/Surface}}
+
+    {{#Surface id = "m3" origin="[0,0]" align="[0,0.4]" translate="[0,0,-1]" size="[undefined,90]" class="sidebar m3"}}
+    <img src="news.png" width="190px">
+    {{/Surface}}
+
+    {{#Surface id = "m4" origin="[0,0]" align="[0,0.6]" translate="[0,0,-1]" size="[undefined,90]" class="sidebar m4"}}
+    <img src="reddit.png" width="190px">
+    {{/Surface}}
+
+    {{#Surface id = "m5" origin="[0,0]" align="[0,0.8]" translate="[0,0,-1]" size="[undefined,90]" class="sidebar m5"}}
+    <img src="entertainment.png" width="190px">
+    {{/Surface}}
+
+
+    {{/View}}
+
+    {{#HeaderFooterLayout id="hfl" size="[undefined,undefined]" headerSize="50" footerSize="50"}}
+    {{#Surface target="header" id="hback" size="[undefined,undefined]" class="header"}}{{/Surface}}
+
+
+    {{#Surface target="header" id="headr" size="[100,50]" origin="[0,.5]" align="[0,.5]" translate="[0,0,10]"  class="header"}}
+    Header
+    {{/Surface}}
+
+    {{#Surface target="header" id="headt" size="[100,50]" origin="[.5,.5]" align="[.5,.5]" class="headText" }}
+    Page 1
+    {{/Surface}}
+
+    {{#Surface target="header" id="headl" origin="[.5,.5]" size="[50,50]" align="[.9,.5]" class="headArrows" }}
+    >>
+    {{/Surface}}
+
+
+    {{>View  template="rcModHeadFoot" target="content" size="[undefined,undefined]" translate="[0,0,-1]"}}
+
+
+
+
+    {{#Surface target="footer"  class="footer"}}
+    Footer
+    {{/Surface}}
+
+    {{#Surface id="b1" target="footer" class="btn btn-primary footbtn" translate="[0,0,10]" size="[70,40]" origin="[0,0]" align="[.7,.1]"}}
+    Home
+    {{/Surface}}
+    {{/HeaderFooterLayout}}
+    {{/View}}
+
+{{/famousContext}}
+    </Template>

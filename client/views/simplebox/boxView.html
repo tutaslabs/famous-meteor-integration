@@ -1,0 +1,10 @@
+<Template name="boxView">
+
+    {{#View size="[undefined,undefined]"}}
+    {{>Surface template='boxContent' origin="[0,0]" size="[undefined,undefined]"}}
+    {{>Surface template='box' size="[100,100]" origin="[.5,.5]" align="[.5,.4]" class="centered bg-red box1" translate="[0,0,20]"}}
+    {{>Surface template='boxdrag' size="[100,100]" origin="[.5,.5]" align="[.5,.6]" class="centered bg-red" translate="[0,0,20]"}}
+    {{>Surface template='box' size="[100,100]" origin="[.5,.5]" align="[.5,.8]" class="centered bg-red box2" translate="[0,0,20]"}}
+    {{/View}}
+
+</Template>

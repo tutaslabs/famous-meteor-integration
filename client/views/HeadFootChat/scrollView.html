@@ -1,0 +1,7 @@
+<Template name="scrollView">
+    {{#Scrollview size="[undefined,undefined]" translate = "[0,0,-10]" }}
+    {{#famousEach items}}
+    {{>Surface template="scrollContent" size="[undefined,100]" modifier="Modifier"}}
+    {{/famousEach}}
+    {{/Scrollview}}
+</Template>

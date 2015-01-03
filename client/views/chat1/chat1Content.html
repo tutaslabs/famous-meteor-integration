@@ -1,0 +1,29 @@
+<Template name="chat1Content">
+    <div class="container">
+        <h5>Meteor and Famo.us Let's Chat!</h5>
+
+        <input type="text" id="tfield" style="width: 300px" placeholder="Enter note">
+        <button class="btn btn-primary" id="ebtn">Add</button>
+
+
+    <div class="panel panel-default">
+        <h3 class="panel-title"><br><br>Posts</h3>
+        <div class="panel-body" id="pbody" style="height: 225px;overflow: auto">
+            <ul class="list-group" id="mlist" style="width: 100%;">
+                {{#each posting}}
+                <li class="list-group-item hitem" id="{{_id}}">
+                    {{text}}<button class="btn btn-sm pull-right" id="ibtn">Del</button>
+                </li>
+                {{/each}}
+
+            </ul>
+        </div>
+
+    </div>
+        <button class="btn btn-primary" id="bbtn">Home</button>
+</div>
+
+
+
+
+</Template>

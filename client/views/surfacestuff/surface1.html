@@ -1,0 +1,109 @@
+<Template name="surface1">
+
+{{#famousContext id='mainCtx'}}
+{{#View size='[undefined,undefined]'}}
+
+    {{#Surface modifier='StateModifier' size='[undefined,50]' origin='[0,0]' align='[0,0]' }}
+    The View is positioned relative to the browser window. The view contains 4 surfaces.
+    The Origin x,y pos. is relative to the surface. The Align x,y pos. is relative to the surface's parent (view).
+    The x,y coords range from 0 (left,top) to 1 (right,bottom).
+    {{/Surface}}
+
+
+    {{#View size='[300,200]' origin='[.5,.5]' align='[.5,.75]' }}
+
+
+    {{#Slider  id='slide' size = '[150,25]'
+    origin= '[1,0.5]'
+    align= '[0.65 ,.55]'
+    start= '0'
+    end='1'
+    round= '2'
+    label = 'Align X'
+    initialVal = '0'
+    trackColor = 'lightgrey'
+    sliderColor = 'lightblue'
+    }}{{/Slider}}
+
+    {{#Slider  id='slideY' size = '[150,25]'
+    origin= '[1,0.5]'
+    align= '[.65,.8]'
+    start= '0'
+    end='1'
+    round= '2'
+    label = 'Align Y'
+    initialVal = '0'
+    trackColor = 'lightgrey'
+    sliderColor = 'lightblue'
+    }}{{/Slider}}
+
+
+    {{#Slider  id='slideA' size = '[150,25]'
+    origin= '[1,0.5]'
+    align= '[0.99,.55]'
+    start= '0'
+    end='1'
+    round= '2'
+    label = 'Origin X'
+    initialVal = '0'
+    trackColor = 'lightgrey'
+    sliderColor = 'lightblue'
+    }}{{/Slider}}
+
+    {{#Slider  id='slideAY' size = '[150,25]'
+    origin= '[1,0.5]'
+    align= '[0.99,.8]'
+    start= '0'
+    end='1'
+    round= '2'
+    label = 'Origin Y'
+    initialVal = '0'
+    trackColor = 'lightgrey'
+    sliderColor = 'lightblue'
+    }}{{/Slider}}
+{{/View}}
+
+    {{#View size='[300,300]' origin='[.5,.5]' align='[.5,.45]'}}
+
+    {{#Surface modifier='StateModifier' size='[undefined,undefined]' style='border: solid 2px black;background-color: lightgrey;' origin='[0,0]' align='[0,0]'}}
+    {{/Surface}}
+
+    {{#Surface modifier='StateModifier' size='[220,50]' origin='[.5,.5]' style = 'font-size: large;' align='[.5,.5]'}}
+    View is 300x300px<br> Align .5,.5  Origin .5,.5 <br>to center it in the browser
+    {{/Surface}}
+
+
+
+    {{#Surface id='red' modifier='Modifier' size='[100,100]' translate='[0,0,5]' style='text-align: center; color: white;' origin='[0,0]' align='[0,0]' class='bg-red'}}
+    Align 0,0<br>Origin 0,0<br><br>Surface
+    {{/Surface}}
+
+    {{#Surface modifier='StateModifier' size='[100,100]' style='text-align: center; color: white;' origin='[1,0]' align='[1,0]' class='bg-green'}}
+    Align 1,0<br>Origin 1,0<br><br>Surface
+    {{/Surface}}
+
+    {{#Surface modifier='StateModifier' size='[100,100]' style='text-align: center;color: white;' origin='[0,1]' align='[0,1]' class='bg-blue'}}
+    Align 0,1<br>Origin 0,1<br><br>Surface
+    {{/Surface}}
+
+    {{#Surface modifier='StateModifier' size='[100,100]' style='text-align: center;' origin='[1,1]' align='[1,1]' class='bg-yellow'}}
+    Align 1,1<br>Origin 1,1<br><br>Surface
+    {{/Surface}}
+
+  {{/View}}
+
+
+
+
+<!--
+
+
+
+
+-->
+{{#homeButton id='hb' useRC='N' RCtemplate='currentTemplate' font='large' RCview='homeView' size='[80,40]' origin='[.5,.5]' align='[.5,.93]' label='Home'}}{{/homeButton}}
+
+{{/View}}
+
+{{/famousContext}}
+</Template>

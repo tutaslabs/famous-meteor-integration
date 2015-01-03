@@ -1,0 +1,28 @@
+
+<Template name="boxClickView">
+{{#famousContext id='mainCtx'}}
+
+    {{#View size="[undefined,undefined]"}}
+    {{#Surface size="[undefined,75]" }}
+        <div class="container" style="text-align: center">
+        <h4>Meteor and Famo.us Physics/Events demo</h4>
+        </div>
+    {{/Surface}}
+
+    {{>Surface template='box'  size="[150,100]" origin="[.5,.5]" align="[.5,.25]" class="centeredBox bg-red box1" modifier='Modifier'}}
+    {{>Surface template='box' size="[150,100]" origin="[.5,.5]" align="[.5,.5]" class="centered bg-red box2" }}
+
+    {{#homeButton id='hb' useRC='N' RCtemplate='currentTemplate' RCview='homeView' size='[100,50]' origin='[.5,.5]' align='[.5,.85]' label='Home'}}{{/homeButton}}
+
+
+    {{/View}}
+
+
+{{/famousContext}}
+</Template>
+
+
+
+
+
+

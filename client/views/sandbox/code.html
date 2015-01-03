@@ -1,0 +1,28 @@
+<Template name="codeGridlayout">
+
+
+    {{#snippet lang="spacebars"}}
+
+    {{dstache}}#famousContext id='mainCtx'}}
+    {{dstache}}#View size='[undefined,undefined]'}}
+    {{dstache}}#Surface modifier='StateModifier' size='[undefined,100]'
+        style='text-align: center;font-size: x-large;'}}
+    A gridLayout view will let us specify the number columns and rows and automatically
+    add surfaces from left to right and top to bottom.
+    Below is a 3x1 (x count,y count) grid layout. The grid is completely responsive.
+
+    {{dstache}}/Surface}}
+
+    {{dstache}}#GridLayout dimensions="[3,1]" size="[undefined,100]" origin='[0,.5]' align='[0,.5]'}}
+    {{dstache}}#Surface size="[undefined,100]" class="bg-red centered"}}col1{{dstache}}/Surface}}
+    {{dstache}}#Surface size="[undefined,100]" class="bg-green centered"}}col2{{dstache}}/Surface}}
+    {{dstache}}#Surface size="[undefined,100]" class="bg-blue centered"}}col3{{dstache}}/Surface}}
+    {{dstache}}/GridLayout}}
+
+
+    {{dstache}}/View}}
+    {{dstache}}/famousContext}}
+    {{/snippet}}
+
+
+</Template>

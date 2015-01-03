@@ -1,0 +1,25 @@
+<Template name="homeView">
+
+{{#famousContext id='mainCtx'}}
+    {{#View size="[undefined,undefined]" origin="[0,0]"}}
+    {{#Scrollview size="[undefined,undefined]"}}
+    {{>Surface template="homeContent" size="[undefined,1100]"}}
+    {{/Scrollview}}
+
+
+    {{#each pops}}
+    {{#View id=this.view size="[300,400]" opacity=0.8 modifier="StateModifier" origin="[0.5,0.5]" align="[0.5,0.5]"}}
+    {{>Surface id=this.val template=this.val size="[undefined,undefined]" origin="[0,0]" align="[0,0]" class="pop hide" translate="[0,0,30]"}}
+    {{#Surface id=this.but size="[75,35]" origin="[0.5,0.5]" align="[0.5,0.9]" class="btn btn-primary hide" translate="[0,0,50]"}}
+    <div style="text-align: center;">Close</div>
+    {{/Surface}}
+    {{/View}}
+    {{/each}}
+
+
+
+    {{/View}}
+
+
+{{/famousContext}}
+</Template>

@@ -1,0 +1,23 @@
+<Template name="twoToggles">
+{{#famousContext id='mainCtx'}}
+
+{{#View size='[undefined,undefined]'}}
+    {{#Surface modifier='StateModifier' size='[undefined,100]' style='text-align: center;font-size: x-large;'}}
+    Example of a custom UI component called 'toggle'. The state (on/off) was made reactive in order to update the page text.
+     The Home button is also a custom component.
+    {{/Surface}}
+{{#Toggle id='xx' session='t1' event='toggleOne' origin='[.5,.5]' align='[.5,.4]' size='[150,75]'}}{{/Toggle}}
+
+{{#Toggle id='xxx' session='t2' event='toggleTwo' origin='[.5,.5]' align='[.5,.6]' size='[150,75]'}}{{/Toggle}}
+
+
+{{>Surface template='showSession' modifier='StateModifier' style='line-size: 25px;' size='[250,50]' align='[.5,.75]' origin='[.5,.5]' translate='[0,0,10]'}}
+
+    {{#homeButton id='hb' useRC='N' RCtemplate='currentTemplate' RCview='homeView' size='[100,50]' origin='[.5,.5]' align='[.5,.85]' label='Home'}}{{/homeButton}}
+
+{{/View}}
+
+
+
+    {{/famousContext}}
+</Template>

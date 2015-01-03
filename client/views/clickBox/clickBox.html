@@ -1,0 +1,42 @@
+<template name="clickBox">
+    {{#famousContext id='mainCtx'}}
+
+    {{#View size="[undefined,undefined]"}}
+    {{#Surface size="[undefined,100]" origin="[0,0]"}}
+    <div style="line-height: 25px; font-size: x-large;text-align: center">
+        Meteor and Famous events
+    </div>
+    <br>
+    <div style="font-size: medium">
+        The top box is triggered by Famous clicks<br>
+        The bottom box by Meteor clicks<br>
+        Both are reactive via a session variable.
+    </div>
+
+    {{/Surface}}
+
+<!-- this uses famous events on the surface - notice we must name it so we can find it later -->
+    {{#Surface id="s1" size="[100,100]" align="[.5,.3]" origin="[.5,.5]" }}
+
+    <div style="width:100%; height: 100%;align-content: center;background-color: red;" class="ev_surface_click">
+        {{clickCount}}
+    </div>
+    {{/Surface}}
+
+<!-- example of using meteor events -->
+    {{>Surface template="clickBox2" size="[100,100]" align="[.5,.5]" origin="[.5,.5]"}}
+
+
+    {{#Surface id="b1" size="[100,50]" align="[.5,.8]" origin="[.5,.5]"}}
+
+    <button style="text-align:  center;font-size: x-large" class="btn btn-primary">Home</button>
+
+    {{/Surface}}
+
+
+
+    {{/View}}
+
+    {{/famousContext}}
+
+</template>

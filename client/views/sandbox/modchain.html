@@ -1,0 +1,15 @@
+<Template name="modchain">
+{{#famousContext id='mainCtx'}}
+{{#View size='[undefined,undefined]'}}
+
+{{#Surface id='s1' size='[undefined,100]' style='text-align: center; font-size: x-large;'}}
+The Famo.us Modifier Chain allows you add and remove  any number of modifiers to a single Render Node on the fly.
+Below we have a box with 2 modifiers.. origin/align to center it and a translate 50px on Y to move it down.
+    {{/Surface}}
+
+
+{{#Surface id='b1' modifier="StateModifier" size='[100,50]' class='btn btn-primary' origin='[0.5,0.5]' align='[0.5,0.9]'}}Home{{/Surface}}
+
+{{/View}}
+{{/famousContext}}
+</Template>

@@ -1,0 +1,35 @@
+<Template name="modblaze">
+{{#famousContext id='mainCtx'}}
+
+    {{#View size="[undefined,undefined]"}}
+
+<!--create header text-->
+    {{#StateModifier  translate="[0,10,30]"}}
+    {{#Surface origin="[0,0]" align="[0,0]" size="[undefined,50]"  class="headText2"}}
+    Famo.us Modifier Example Using a Transitionable to animate 2 surfaces in sync
+    {{/Surface}}
+    {{/StateModifier}}
+
+
+<!--create red card surface -->
+
+    {{>Surface template="redbox" size="[250,350]"  origin="[0.5, 0.5]" align="[0.5, 0.5]" class="redCard"
+    modifier="Modifier" translate="[0,0,5]"}}
+
+
+<!-- create circle -->
+    {{#Modifier translate="[0,10,80]"}}
+    {{>Surface template="circle" size="[150, 150]" origin="[0.5, 0.5]" align="[0.5, 0.5]" class="circle"}}
+    {{/Modifier}}
+
+
+
+<!-- create button -->
+    {{#Surface id="home" size="[80, 40]"  class="btn btn-primary mybtn" align="[0.5,.96]" origin="[0.5,.5]"}}
+    Home
+    {{/Surface}}
+    {{/View}}
+
+   {{/famousContext}}
+
+</Template>

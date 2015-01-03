@@ -1,0 +1,119 @@
+<template name="buttons">
+    <p>
+    <h5>Surfaces, Views and Layouts</h5>
+    <div class="btn-group-vertical" role="group">
+        {{#each surfaces}}
+ <div class="row">
+
+        <button id={{this.but}} value={{this.val}} class="btn btn-default" style="width: 120px;">
+            {{this.label}}
+        </button>
+        <button id="q" value={{this.pop}} class="btn btn-default" style="width: 10px;text-align: center;">
+         ?
+        </button>
+
+
+         {{desc}}
+     </div>
+        {{/each}}
+
+ </div>
+    <br>
+    <h5>Events</h5>
+
+    <div class="btn-group-vertical" role="group">
+        {{#each events}}
+        <div class="row">
+
+            <button id={{this.but}} value={{this.val}} class="btn btn-default" style="width: 120px;">
+                {{this.label}}
+            </button>
+            <button id="q" value={{this.pop}} class="btn btn-default" style="width: 10px;text-align: center;">
+                ?
+            </button>
+
+
+            {{desc}}
+        </div>
+        {{/each}}
+
+    </div>
+
+
+
+
+
+
+    <h5>Transformations, Modifiers, and Transitionables</h5>
+
+    <div class="btn-group-vertical" role="group">
+        {{#each transforms}}
+        <div class="row">
+
+            <button id={{this.but}} value={{this.val}} class="btn btn-default" style="width: 120px;">
+                {{this.label}}
+            </button>
+            <button id="q" value={{this.pop}} class="btn btn-default" style="width: 10px;text-align: center;">
+                ?
+            </button>
+
+
+            {{desc}}
+        </div>
+        {{/each}}
+
+    </div>
+
+    <h5>Reactive Databases with Meteor</h5>
+    <div class="btn-group-vertical" role="group">
+        {{#each database}}
+        <div class="row">
+
+            <button id={{this.but}} value={{this.val}} class="btn btn-default" style="width: 120px;">
+                {{this.label}}
+            </button>
+            <button id="q" value={{this.pop}} class="btn btn-default" style="width: 10px;text-align: center;">
+                ?
+            </button>
+
+
+            {{desc}}
+        </div>
+        {{/each}}
+
+    </div>
+    <h5>Advanced Topics</h5>
+    <div class="btn-group-vertical" role="group">
+        {{#each advanced}}
+        <div class="row">
+
+            <button id={{this.but}} value={{this.val}} class="btn btn-default" style="width: 120px;">
+                {{this.label}}
+            </button>
+            <button id="q" value={{this.pop}} class="btn btn-default" style="width: 10px;text-align: center;">
+                ?
+            </button>
+
+
+            {{desc}}
+        </div>
+        {{/each}}
+
+    </div>
+    <br>
+
+    </p>
+
+    <strong>Pure Famo.us</strong>
+    <p>
+
+    {{#each famous}}
+    <button id={{this.but}} value={{this.val}} class="btn btn-default">
+        {{this.label}}
+    </button>
+
+    {{/each}}
+
+    </p>
+
+</template>

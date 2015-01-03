@@ -1,0 +1,26 @@
+<Template name="headfootView" xmlns="http://www.w3.org/1999/html">
+
+{{#famousContext id='mainCtx'}}
+    {{#View size="[undefined,undefined]" id='v1'}}
+    {{#HeaderFooterLayout size="[undefined,undefined]" headerSize="50" footerSize="50"}}
+    {{#Surface target="header" class="header"}}
+    Header
+    {{/Surface}}
+    {{#Surface target="header" id="head-text" size="[200,50]" translate="[0,0,20]" origin="[.5,.5]" align="[.5,.5]" class="headText" }}
+    Page 1
+    {{/Surface}}
+
+    {{>View  template="rcHeadFoot" target="content" size="[undefined,undefined]"}}
+
+    {{#Surface target="footer" class="footer"}}
+    Footer
+    {{/Surface}}
+
+    {{>Surface template="footButtonHome" target="footer" translate="[0,0,10]" size="[70,50]" origin="[1,.5]" align="[.95,.7]"}}
+    {{>Surface template="footButtonPage2" target="footer" translate="[0,0,10]" size="[70,50]" origin="[1,.5]" align="[.7,.7]"}}
+    {{>Surface template="footButtonPage1" target="footer" translate="[0,0,10]" size="[70,50]" origin="[1,.5]" align="[.5,.7]"}}
+    {{/HeaderFooterLayout}}
+{{/View}}
+{{/famousContext}}
+
+    </Template>

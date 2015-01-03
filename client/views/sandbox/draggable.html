@@ -1,0 +1,19 @@
+<Template name="draggable">
+{{#famousContext id='mainCtx'}}
+{{#View size='[undefined,undefined]'}}
+
+    {{#Surface modifier='StateModifier' size='[undefined,100]' style='text-align: center;font-size: x-large;' translate='[0,0,10]'}}
+    Example of moving a surface using the Draggable Modifier
+    {{/Surface}}
+
+<!-- add a view so we have a container we can position since draggable doesn't-->
+{{#View origin='[.5,.5]' align='[.5,.5]'}}
+{{#Surface id='s1' modifier="Draggable" size='[200,200]' modifier='Draggable' class='bg-red centered'
+    }} Drag Me {{/Surface}}
+{{/View}}
+
+    {{#homeButton id='hb' useRC='N' RCtemplate='currentTemplate' RCview='homeView' size='[100,50]' origin='[.5,.5]' align='[.5,.85]' label='Home'}}{{/homeButton}}
+
+{{/View}}
+{{/famousContext}}
+</Template>

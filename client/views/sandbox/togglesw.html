@@ -1,0 +1,38 @@
+<Template name="togglesw">
+{{#famousContext id='mainCtx'}}
+
+{{#View size='[undefined,undefined]'}}
+
+    {{#Surface modifier='StateModifier' size='[undefined,100]' style='text-align: center;font-size: x-large;'}}
+    Example of setting view perspective. Box is rotated on the Y axis. The view is positioned away from you. If you do
+    not set the perspective, the box will appear flat (non-rotated).
+    {{/Surface}}
+
+{{#Surface id='br' modifier="Modifier" class='bg-red' style='font-size: xx-large; padding-top: 20px; text-align: center;border-radius: 30px;' size='[150,150]' align='[0.5,0.5]' origin='[.5,.5]'}}Hello{{/Surface}}
+
+
+
+{{#Slider  id='slider' size = '[200,30]'
+    origin= '[.5,.5]'
+    align= '[0.5,.7]'
+    start= -60
+    end= 60
+    round= 0
+    label = 'Rotate Y Degrees '
+    initialVal = -60
+    trackColor = 'lightgrey'
+    sliderColor = 'lightblue'
+    }}{{/Slider}}
+
+
+
+{{#homeButton id='hb' useRC='N' RCtemplate='currentTemplate' RCview='homeView' size='[100,50]' origin='[.5,.5]' align='[.5,.85]' label='Home'}}{{/homeButton}}
+
+
+
+{{/View}}
+{{/famousContext}}
+
+
+
+</Template>

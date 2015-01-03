@@ -1,0 +1,20 @@
+<Template name="gridlayout">
+    {{#famousContext id='mainCtx'}}
+    {{#View size='[undefined,undefined]'}}
+    {{#Surface modifier='StateModifier' size='[undefined,100]' style='text-align: center;font-size: x-large;'}}
+    A gridLayout view will let us specify the number columns and rows and automatically add surfaces from left to right and top to bottom.
+    Below is a 3x1 (x count,y count) grid layout. The grid is completely responsive.
+
+    {{/Surface}}
+
+    {{#GridLayout dimensions="[3,1]" size="[undefined,100]" origin='[0,.5]' align='[0,.5]'}}
+    {{#Surface size="[undefined,100]" class="bg-red centered"}}col1{{/Surface}}
+    {{#Surface size="[undefined,100]" class="bg-green centered"}}col2{{/Surface}}
+    {{#Surface size="[undefined,100]" class="bg-blue centered"}}col3{{/Surface}}
+    {{/GridLayout}}
+
+    {{#homeButton id='hb' useRC='N' RCtemplate='currentTemplate' RCview='homeView' size='[100,50]' origin='[.5,.5]' align='[.5,.85]' label='Home'}}{{/homeButton}}
+
+    {{/View}}
+    {{/famousContext}}
+</Template>

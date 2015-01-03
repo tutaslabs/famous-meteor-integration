@@ -1,0 +1,25 @@
+<Template name="flexiblelayout">
+{{#famousContext id='mainCtx'}}
+{{#View size='[undefined,undefined]'}}
+    {{#Surface modifier='StateModifier' size='[undefined,100]' style='text-align: center;font-size: x-large;'}}
+Flexible layout allows you to define the size ratios of your horizontal or vertical grid items and change it on the fly.
+    The following grid has ratios of 2,3,5.
+    {{/Surface}}
+
+    {{#Modifier size="[undefined,200]" origin='[0,0]' align='[0,.3]' }}
+    {{#FlexibleLayout id='fl' ratios="[2,3,5]" }}
+    {{#Surface size="[undefined,undefined]" class="bg-red centered"}}col1{{/Surface}}
+    {{#Surface size="[undefined,undefined]" class="bg-green centered"}}col2{{/Surface}}
+    {{#Surface size="[undefined,undefined]" class="bg-blue centered"}}col3{{/Surface}}
+    {{/FlexibleLayout}}
+    {{/Modifier}}
+
+
+    {{#Surface id='b1' class='btn btn-primary' size='[100,50]' origin='[0.5,0.5]' align='[.5,.75]'}}Resize{{/Surface}}
+
+    {{#homeButton id='hb' useRC='N' RCtemplate='currentTemplate' RCview='homeView' size='[100,50]' origin='[.5,.5]' align='[.5,.85]' label='Home'}}{{/homeButton}}
+
+    {{/View}}
+
+{{/famousContext}}
+</Template>
