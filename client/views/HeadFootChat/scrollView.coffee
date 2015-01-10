@@ -4,10 +4,3 @@ Template.scrollView.items = ->
 Template.scrollView.rendered = ->
   Meteor.subscribe 'chat'
 
-
-
-  ###
-  @contents.on 'deploy', =>
-    h = $('.famous-container .container')[0].scrollHeight
-    @contents.setSize [undefined, h]
-  ###

@@ -4,12 +4,26 @@ Router.route 'rcMain',
 
 Router.route 'modifier'
 Router.route 'modchain'
-Router.route 'modblaze'
+Router.route 'modblaze',->
+  this.render 'modblaze',
+    data: ->
+      return {home: this.params.query.home}
+
 Router.route 'draggable'
 Router.route 'gridlayout'
 Router.route 'flexiblelayout'
-Router.route 'twoToggles'
-Router.route 'togglesw'
+Router.route 'twoToggles', ->
+  this.render 'twoToggles',
+    data: ->
+      return {home: this.params.query.home}
+
+
+
+
+Router.route 'togglesw', ->
+  this.render 'togglesw',
+    data: ->
+      return {home: this.params.query.home}
 Router.route 'togit'
 Router.route 'chat1View'
 Router.route 'clickBox'

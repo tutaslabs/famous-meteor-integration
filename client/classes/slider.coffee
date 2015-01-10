@@ -1,5 +1,5 @@
 Meteor.startup  ->
-#generic simple scroll page of one surface
+#a famous slider that will work on mobile
 #public @value updates in realtime as tracking
 #public @endValue will be the value then the slider stops
 

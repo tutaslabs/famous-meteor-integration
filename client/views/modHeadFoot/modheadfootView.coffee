@@ -3,7 +3,7 @@
 Template.modheadfootView.rendered = ->
 #pull the view up then animate down when finished
 #happens so fast appears to be animating down only
-
+  Meteor.subscribe 'chat'
   App.hfl = new Famous.Transitionable 0
 #so menu doesn't show on background when scrolling
   FView.byId('backing').modifier.setTransform Famous.Transform.translate(0, 0,-2)
@@ -40,6 +40,7 @@ Template.modheadfootView.rendered = ->
         App.menuanimate(s)
         if evt.currentTarget.classList[2] is "m1"
           fhr.setContent 'Header'
+          fht.setContent 'Design'
           fhr.removeClass 'headArrows'
           App.hfl.set 0,{duration: 500,ease: "easeInOut"},=>
             Session.set 'currentModHeadFootTemplate','design'
@@ -49,12 +50,26 @@ Template.modheadfootView.rendered = ->
 
         else if evt.currentTarget.classList[2] is "m2"
           fhr.setContent 'Header'
+          fht.setContent 'Dribble'
           fhr.removeClass 'headArrows'
           App.hfl.set 0,{duration: 500,ease: "easeInOut"},=>
             Session.set 'currentModHeadFootTemplate','dribble'
           Meteor.setTimeout ->
             FView.byId('backing').modifier.setTransform Famous.Transform.translate(0, 0,-2)
           ,600
+
+        else if evt.currentTarget.classList[2] is "m3"
+          fhr.setContent 'Header'
+          fht.setContent 'Chat'
+          fhr.removeClass 'headArrows'
+          App.hfl.set 0,{duration: 500,ease: "easeInOut"},=>
+            Session.set 'currentModHeadFootTemplate','modscrollView'
+          Meteor.setTimeout ->
+            FView.byId('backing').modifier.setTransform Famous.Transform.translate(0, 0,-2)
+          ,600
+
+
+
 
         Meteor.setTimeout ->
           Session.set 'menupressed',false

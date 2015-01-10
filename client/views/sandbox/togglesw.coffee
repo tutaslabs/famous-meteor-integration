@@ -4,20 +4,23 @@ Template.togglesw.rendered = ->
   cs = FView.byId 'mainCtx'
   cs.context.setPerspective 1000
 
+  slv = FView.byId('slider').view
 
-  sl = FView.byId 'slider'
-  slv = sl.view
+  brm = FView.byId('br').modifier
 
-
-
-  br = FView.byId 'br'
-
-  brm = br.modifier
   brm.transformFrom =>
     dtor = 0.0174533
     return Famous.Transform.rotateY slv.value * dtor
 
+  #home query value passed by iron router
+  home = this.data.home
+  hts = FView.byId('ht').surface
 
+  hbm = FView.byId('hb').modifier
+  #this does not 'hide' the button - only makes it invisible
+  if home is 'no'
+    hbm.setOpacity(0)
+    hts.setContent ' '
 
 
 

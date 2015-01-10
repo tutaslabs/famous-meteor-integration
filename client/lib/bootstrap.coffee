@@ -16,7 +16,7 @@ Meteor.startup  ->
   Session.set 'mhfclicked',false
   Session.set 'menupressed',false
 
-#  Logger.setLevel 'famous-views','info'
+  Logger.setLevel 'famous-views','info'
   App.ebtn = false
   App.hbtn = false
   App.angle = new Famous.Transitionable -Math.PI/3

@@ -1,0 +1,21 @@
+<Template name="modscrollView">
+
+    {{#View size="[undefined,undefined]" origin="[0,0]" align="[0,0]"}}
+
+
+
+    {{#View size="[undefined,80]"}}
+        {{#Surface id="backing1" translate="[0,0,18]" size="[undefined,undefined]" class="headerData" }}{{/Surface}}
+        {{>Surface template="enterChat" origin="[0,0]" align="[0.1,.4]" translate="[0,0,20]"}}
+    {{/View}}
+
+    {{#Scrollview size="[undefined,true]" origin="[0,0]" align="[0,.15]"}}
+    {{#famousEach items}}
+    {{>Surface  template="modscrollContent" size="[undefined,100]" modifier="Modifier"}}
+    {{/famousEach}}
+    {{/Scrollview}}
+
+
+    {{/View}}
+
+</Template>
