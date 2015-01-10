@@ -1,5 +1,7 @@
 Template.page1.rendered = ->
     fview = FView.from this
-    x = Math.round((320/window.innerWidth)*1200)
+    fvs = fview.surface
 
-    fview.parent.modifier.setSize  [undefined,x]
+    h = $('.famous-container .famous-group')[0].scrollHeight
+
+    fvs.setSize [undefined, h]
