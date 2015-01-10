@@ -10,7 +10,7 @@ Meteor.methods
     Chat.insert post,
     (error,res) =>
       if error
-        throw new Meteor.Error(404, error)
+        throw new Meteor.Error(404, error.sanitizedError)
         return error
       else
         return ''
@@ -18,7 +18,7 @@ Meteor.methods
     Chat.remove _id: id,
       (error,res) =>
         if error
-          throw new Meteor.Error(404, error)
+          throw new Meteor.Error(404, error.sanitizedError)
           return error
         else
           return ''

@@ -7,7 +7,7 @@ Template.enterChat.events
     if App.ebtn is false
       Meteor.call 'newChat',{text: d}, (error,res) ->
         if error
-          alert error.reason.sanitizedError.reason
+          alert error.reason.reason
       $("#tfield").val("")
       App.ebtn = true
     Meteor.setTimeout ->
