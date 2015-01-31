@@ -15,6 +15,7 @@ Meteor.startup  ->
   Session.set 'clicked',false
   Session.set 'mhfclicked',false
   Session.set 'menupressed',false
+  Session.set 'serverURL', location.origin
 
   Logger.setLevel 'famous-views','info'
   App.ebtn = false

@@ -1,5 +1,5 @@
 Meteor.startup  ->
-#generic simple scroll page of one surface
+
   class App.Toggle extends Famous.View
     DEFAULT_OPTIONS:
       content: 'WTF'
@@ -11,7 +11,7 @@ Meteor.startup  ->
       @createPage()
 
     createPage: ->
-
+#tell widget if we wished to be notified via the famous eventHander when it is toggled
       if !@options.event
         @event = 'toggle'
       else
@@ -27,7 +27,10 @@ Meteor.startup  ->
         origin: @options.origin
         align: @options.align
         size: @options.size
-
+#creates our render node to act as the 'parent view' for  all children attached to the node
+#all children will be subject to the origin,align, and size constraints of the render node
+#this allows us to size and place our widget anywhere we want. all widget components will be
+#attached to the render node called 'node'
       node = v.add modnode
 
 # create green surface

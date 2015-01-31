@@ -4,13 +4,13 @@ if (Meteor.isServer) {
 
         insert: function (userId, doc) {
 
-            return false;
+            return true;
         },
         update: function (userId, doc, fields, modifier) {
             return false;
         },
         remove: function (userId, doc) {
-            return false;
+            return true;
         }
 
 
