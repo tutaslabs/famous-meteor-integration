@@ -18,7 +18,7 @@ Template.modblaze.rendered = ->
   App.xpos.set 0
   App.scale.set 1
 
-  fviewHome.surface.on "click", =>
+  fviewHome.surface.on App.EVENT_TYPE, =>
     Session.set 'redboxclicked',false
     Router.go '/'
 

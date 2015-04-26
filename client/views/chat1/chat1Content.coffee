@@ -26,15 +26,13 @@ Template.chat1Content.events
 
 
 # ios bug.... button is getting dbl clicks even with fastclick fix
-      'click #ebtn': (evt,tmpl) ->
+      'click  #ebtn' : (evt,tmpl) ->
         d = tmpl.find("#tfield").value
-        if App.ebtn is false
-          Meteor.call 'newChat',{text: d}, (error,res) ->
+
+        Meteor.call 'newChat',{text: d}, (error,res) ->
             if error
               alert error.reason.reason
-          $("#tfield").val("")
-          App.ebtn = true
-        Meteor.setTimeout ->
-          App.ebtn = false
-        ,500
+        $("#tfield").val("")
+
+
 

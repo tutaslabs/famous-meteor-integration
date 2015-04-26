@@ -5,12 +5,6 @@ Template.enterChat.events
   'click #ebtn': (evt,tmpl) ->
     d = tmpl.find("#tfield").value
     if App.ebtn is false
-      ###
-      Meteor.call 'newChat',{text: d}, (error,res) ->
-        if error
-          alert error.reason.reason
-
-      ###
       Chat.insert
         text: d
       , (error,res) ->

@@ -11,11 +11,8 @@ Template.redbox.rendered = ->
     return Famous.Transform.rotateY App.angled.get()*degtorad
 
 ##################### bug - getting double clicks for some reason - need to delay for 500ms
-  s.on "click", =>
-    flag = Session.get 'redboxclicked'
-    if  flag is off
+  s.on App.EVENT_TYPE, =>
 
-      Session.set 'redboxclicked',true
       if App.isToggled is on
         targetAngle = defaultd
       else
@@ -25,7 +22,9 @@ Template.redbox.rendered = ->
 
       App.angled.set targetAngle, { duration: 2000, curve: 'easeInOut' }
       App.isToggled = !App.isToggled
-
+      ###
       Meteor.setTimeout ->
         Session.set 'redboxclicked',false
       ,500
+
+      ###

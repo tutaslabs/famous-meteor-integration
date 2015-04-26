@@ -26,9 +26,7 @@ Meteor.startup  ->
   App.scale = new Famous.Transitionable 1
   App.isToggled = false
   App.events = new Famous.EventHandler
-
-
-
+  App.EVENT_TYPE = unless window.ontouchstart is undefined then 'touchstart' else 'click'
 
 App.getrotateY = ->
   return Session.get('rotate')
